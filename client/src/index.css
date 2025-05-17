@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --primary: 252 100% 50%; /* #1200FF - tech blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 188 100% 50%; /* #00E5FF - vibrant cyan */
+    --secondary-foreground: 240 10% 3.9%;
+    --accent: 346 87% 52%; /* #FF3366 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --success: 142 69% 41%; /* #28A745 */
+    --success-foreground: 0 0% 100%;
+    --warning: 45 100% 51%; /* #FFC107 */
+    --warning-foreground: 20 14.3% 4.1%;
+    --ring: 252 100% 50%;
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --primary: 252 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 188 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 346 87% 52%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --success: 142 69% 41%;
+    --success-foreground: 0 0% 100%;
+    --warning: 45 100% 51%;
+    --warning-foreground: 20 14.3% 4.1%;
+    --ring: 252 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Jost', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Jost', sans-serif;
+  }
+}
+
+.article-content {
+  @apply text-foreground;
+}
+
+.article-content p {
+  @apply mb-6 leading-relaxed;
+}
+
+.article-content h2 {
+  @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.article-content h3 {
+  @apply text-xl font-bold mt-6 mb-3;
+}
+
+.article-content ul, .article-content ol {
+  @apply mb-6 pl-6;
+}
+
+.article-content ul {
+  @apply list-disc;
+}
+
+.article-content ol {
+  @apply list-decimal;
+}
+
+.article-content li {
+  @apply mb-2;
+}
+
+.article-content blockquote {
+  @apply border-l-4 border-primary pl-4 italic my-8 py-2;
+}
+
+.article-content pre {
+  @apply bg-muted p-4 rounded-lg overflow-x-auto mb-6;
+}
+
+.article-content code {
+  @apply font-mono text-sm;
+}
